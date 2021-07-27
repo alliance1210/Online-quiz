@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Online Quiz</title>
+    </head>
+    <body >
+        <div class = "container">
+            <div id="home" class="home">
+                <h1>Welcome!!</h1>
+                  <p><h2>Geography</h2>
+                    <h2>by Pradei, Newton School- Firefox batch,2021.</h2>
+                </p>  
+                <button onClick="startQuiz()">Start</button>
+            </div>
+            <div id="hide" class="hide"><h1 id="question" >Questions</h1>
+            <div class ="btn-grid">
+            <button id="ans1" onClick="firstOption()" >Answer 1</button>
+            <button id="ans2" onClick="secondOption()" >Answer 2</button>
+            <button id="ans3" onClick="thirdOption()" >Answer 3</button>
+            <button id="ans4" onClick="fourthOption()" >Answer 4</button>
+            </div>
+            
+            <button onClick="nextQuestion()" >Next</button>
+            </div>
+           <div id = "score" class = "score">
+                <h1 >Score: <span id ="result"></span> </h1>
+                <a href="index.html"> <button id = "reload" onClick="reload()">Menu</button></a>
+            </div>
+        </div>
+        <script src="geography.js"></script>
+    </body>
+</html>
