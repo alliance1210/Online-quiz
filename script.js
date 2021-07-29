@@ -8,7 +8,7 @@ function startQuiz(){
         document.getElementById("ans1").innerText=science[counter].a;
         document.getElementById("ans2").innerText=science[counter].b;
         document.getElementById("ans3").innerText=science[counter].c;
-        document.getElementById("ans4").innerText=science[counter].d;
+        document.getElementById("ans4").innerText=science[counter].d ;
 
 }
 
