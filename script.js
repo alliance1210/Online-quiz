@@ -1,6 +1,7 @@
 /*https://codesandbox.io/s/quiz-pure-dom-l0k8x?file=/src/index.js:4889-4906*/
  /*name, timer, disable buttons*/
 function startQuiz(){
+
     document.getElementById("home").style.display="none";
     document.getElementById("hide").style.display="block";
     document.getElementById("question").innerText=science[counter].Question;
@@ -10,7 +11,13 @@ function startQuiz(){
         document.getElementById("ans4").innerText=science[counter].d;
 
 }
+
+let text = document.getElementById("txt").value;
+document.getElementById('welcome').innerText=text;
+
 function scienceQuiz(){
+    var txt = document.getElementById("txt").value;
+    document.getElementById("welcome").innerHTML = "Welcome "+txt;
     document.getElementById("category").style.display="none";
     document.getElementById("spage").style.display="block";
 }
@@ -90,9 +97,11 @@ function nextQuestion(){
         document.getElementById("score").style.display="block";
         document.getElementById("result").innerHTML=countAns+" out of 5";
         clearInterval(myTimer);
-        return;
+        
     }
+    if(counter < science.length){
     myTimer = setInterval(nextQuestion, 10000);
+    }
 }
 
 

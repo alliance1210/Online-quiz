@@ -7,9 +7,11 @@ function startQuiz(){
         document.getElementById("ans1").innerText=science[counter].a;
         document.getElementById("ans2").innerText=science[counter].b;
         document.getElementById("ans3").innerText=science[counter].c;
-        document.getElementById("ans4").innerText=science[counter].d;
-
+        document.getElementById("ans4").innerText=science[counter].d;     
 }
+const button = document.querySelector("#restart-button");
+const bars = document.querySelectorAll(".round-time-bar");
+
 const science=[
     {
    Question:"The Battle of Plassey was fought in",
@@ -51,6 +53,16 @@ const science=[
 counter=0;
 let disabled=false;
 
+button.addEventListener("click", () => {
+    bars.forEach((bar) => {
+      bar.classList.remove("round-time-bar");
+      bar.offsetWidth;
+      bar.classList.add("round-time-bar");
+    });
+  });
+
+var myTimer = setInterval(nextQuestion,100000);
+
 function nextQuestion(){
     counter++;
     document.getElementById("ans1").style.backgroundColor="#7CB9E8";
@@ -70,8 +82,11 @@ function nextQuestion(){
         document.getElementById("hide").style.display="none";
         document.getElementById("score").style.display="block";
         document.getElementById("result").innerHTML=countAns+" out of 5";
+        clearInterval(myTimer);
+        return;
         
     }
+    myTimer = setInterval(nextQuestion, 10000);
 }
 function reload(){
     document.getElementById("score").style.display="none";

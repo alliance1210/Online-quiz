@@ -1,0 +1,19 @@
+{
+  "name": "online_quiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alliance1210/Online-quiz.git"
+  },
+  "author": "Pradei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alliance1210/Online-quiz/issues"
+  },
+  "homepage": "https://github.com/alliance1210/Online-quiz#readme"
+}

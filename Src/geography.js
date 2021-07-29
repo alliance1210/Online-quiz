@@ -10,6 +10,9 @@ function startQuiz(){
         document.getElementById("ans4").innerText=science[counter].d;
 
 }
+const button = document.querySelector("#restart-button");
+const bars = document.querySelectorAll(".round-time-bar");
+
 const science=[
     {
    Question:"'Satmala Hills' are located in which among the following states?",
@@ -51,7 +54,17 @@ const science=[
 counter=0;
 
 let disabled=false;
+button.addEventListener("click", () => {
+    bars.forEach((bar) => {
+      bar.classList.remove("round-time-bar");
+      bar.offsetWidth;
+      bar.classList.add("round-time-bar");
+    });
+  });
+
+var myTimer = setInterval(nextQuestion,100000);
 function nextQuestion(){
+    clearInterval(myTimer);
     counter++;
     document.getElementById("ans1").style.backgroundColor="#7CB9E8";
     document.getElementById("ans2").style.backgroundColor="#7CB9E8";
@@ -70,8 +83,10 @@ function nextQuestion(){
         document.getElementById("hide").style.display="none";
         document.getElementById("score").style.display="block";
         document.getElementById("result").innerHTML=countAns+" out of 5";
-        
+        clearInterval(myTimer);
+        return;
     }
+    myTimer = setInterval(nextQuestion, 10000);
 }
 function reload(){
     document.getElementById("score").style.display="none";
