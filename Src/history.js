@@ -49,7 +49,7 @@ const science=[
 }
 ];
 counter=0;
-
+let disabled=false;
 
 function nextQuestion(){
     counter++;
@@ -57,6 +57,7 @@ function nextQuestion(){
     document.getElementById("ans2").style.backgroundColor="#7CB9E8";
     document.getElementById("ans3").style.backgroundColor="#7CB9E8";
     document.getElementById("ans4").style.backgroundColor="#7CB9E8";
+    disabled=false;
     if( counter < science.length){
         
         document.getElementById("question").innerText=science[counter].Question;
@@ -81,6 +82,7 @@ function reload(){
 }
 countAns = 0;
 function firstOption(){
+    if(disabled === false){
     if(science[counter].a === science[counter].answer){
         document.getElementById('ans1').style.backgroundColor="green";
         document.getElementById('ans2').style.backgroundColor="red";
@@ -93,7 +95,10 @@ function firstOption(){
         document.getElementById('ans1').style.backgroundColor="red";
     }
 }
+     disabled=true;  
+}
 function secondOption(){
+    if(disabled===false){
     if(science[counter].b === science[counter].answer){
         document.getElementById('ans1').style.backgroundColor="red";
         document.getElementById('ans2').style.backgroundColor="green";
@@ -105,8 +110,10 @@ function secondOption(){
     else{
         document.getElementById('ans2').style.backgroundColor="red";
     }
+}   disabled=true;
 }
 function thirdOption(){
+    if(disabled===false){
     if(science[counter].c === science[counter].answer){
         document.getElementById('ans1').style.backgroundColor="red";
         document.getElementById('ans2').style.backgroundColor="red";
@@ -118,7 +125,10 @@ function thirdOption(){
         document.getElementById('ans3').style.backgroundColor="red";
     }
 }
+disabled=true;
+}
 function fourthOption(){
+    if(disabled===false){
     if(science[counter].d === science[counter].answer){
         document.getElementById('ans1').style.backgroundColor="red";
         document.getElementById('ans2').style.backgroundColor="red";
@@ -130,5 +140,7 @@ function fourthOption(){
     else{
         document.getElementById('ans4').style.backgroundColor="red";
     }
+}
+disabled=true;
 }
 

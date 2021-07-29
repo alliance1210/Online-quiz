@@ -63,3 +63,35 @@ button:hover{
 .score{
     display:none;
 }
+
+
+.round-time-bar {
+    margin: 1rem;
+    overflow: hidden;
+  }
+  .round-time-bar div {
+    height: 20px;
+    animation: roundtime calc(var(--duration) * 1s) steps(var(--duration))
+      forwards;
+    transform-origin: left center;
+    background: linear-gradient(to bottom, blue, darkblue);
+  }
+  
+  .round-time-bar[data-style="smooth"] div {
+    animation: roundtime calc(var(--duration) * 1s) linear forwards;
+  }
+  
+  .round-time-bar[data-style="fixed"] div {
+    width: calc(var(--duration) * 5%);
+  }
+  input #text{
+    font-size:36px;
+  }
+ 
+  
+  @keyframes roundtime {
+    to {
+      /* More performant than `width` */
+      transform: scaleX(0);
+    }
+  }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../style.css">
         <title>Online Quiz</title>
     </head>
     <body >
@@ -22,10 +22,13 @@
             </div>
             
             <button onClick="nextQuestion()" >Next</button>
+            <div class="round-time-bar" data-style="smooth" style="--duration: 30;">
+                <div></div>
+              </div>
             </div>
            <div id = "score" class = "score">
                 <h1 >Score: <span id ="result"></span> </h1>
-                <a href="index.html"> <button id = "reload" onClick="reload()">Menu</button></a>
+                <a href="../index.html"> <button id = "reload" onClick="reload()">Menu</button></a>
             </div>
         </div>
         <script src="geography.js"></script>

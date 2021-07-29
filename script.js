@@ -1,5 +1,5 @@
 /*https://codesandbox.io/s/quiz-pure-dom-l0k8x?file=/src/index.js:4889-4906*/
- 
+ /*name, timer, disable buttons*/
 function startQuiz(){
     document.getElementById("home").style.display="none";
     document.getElementById("hide").style.display="block";
@@ -14,10 +14,12 @@ function scienceQuiz(){
     document.getElementById("category").style.display="none";
     document.getElementById("spage").style.display="block";
 }
+const button = document.querySelector("#restart-button");
+const bars = document.querySelectorAll(".round-time-bar");
 
 const science=[
     {
-   Question:"Which organisation has developed highly purified ‘Antisera’, for Covid-19 treatment?",
+   Question:"Which organisation has developed highly purified 'Antisera', for Covid-19 treatment?",
    a:"ICMR",
    b:"AIIMS",
    c:"JIPMER",
@@ -55,14 +57,26 @@ const science=[
 ];
 
 counter=0;
+button.addEventListener("click", () => {
+    bars.forEach((bar) => {
+      bar.classList.remove("round-time-bar");
+      bar.offsetWidth;
+      bar.classList.add("round-time-bar");
+    });
+  });
 
-
+var myTimer = setInterval(nextQuestion,100000);
 function nextQuestion(){
+    clearInterval(myTimer);
+    
+
+
     counter++;
     document.getElementById("ans1").style.backgroundColor="#7CB9E8";
     document.getElementById("ans2").style.backgroundColor="#7CB9E8";
     document.getElementById("ans3").style.backgroundColor="#7CB9E8";
     document.getElementById("ans4").style.backgroundColor="#7CB9E8";
+    disabled=false;
     if( counter < science.length){
         
         document.getElementById("question").innerText=science[counter].Question;
@@ -75,9 +89,13 @@ function nextQuestion(){
         document.getElementById("hide").style.display="none";
         document.getElementById("score").style.display="block";
         document.getElementById("result").innerHTML=countAns+" out of 5";
-        
+        clearInterval(myTimer);
+        return;
     }
+    myTimer = setInterval(nextQuestion, 10000);
 }
+
+
 function reload(){
     document.getElementById("score").style.display="none";
     document.getElementById("home").style.display="block";
@@ -88,7 +106,9 @@ function reload(){
    
 }
 countAns = 0;
+let disabled=false;
 function firstOption(){
+    if(disabled === false){
     if(science[counter].a === science[counter].answer){
         document.getElementById('ans1').style.backgroundColor="green";
         document.getElementById('ans2').style.backgroundColor="red";
@@ -101,7 +121,10 @@ function firstOption(){
         document.getElementById('ans1').style.backgroundColor="red";
     }
 }
+     disabled=true;  
+}
 function secondOption(){
+    if(disabled===false){
     if(science[counter].b === science[counter].answer){
         document.getElementById('ans1').style.backgroundColor="red";
         document.getElementById('ans2').style.backgroundColor="green";
@@ -113,8 +136,10 @@ function secondOption(){
     else{
         document.getElementById('ans2').style.backgroundColor="red";
     }
+}   disabled=true;
 }
 function thirdOption(){
+    if(disabled===false){
     if(science[counter].c === science[counter].answer){
         document.getElementById('ans1').style.backgroundColor="red";
         document.getElementById('ans2').style.backgroundColor="red";
@@ -126,7 +151,10 @@ function thirdOption(){
         document.getElementById('ans3').style.backgroundColor="red";
     }
 }
+disabled=true;
+}
 function fourthOption(){
+    if(disabled===false){
     if(science[counter].d === science[counter].answer){
         document.getElementById('ans1').style.backgroundColor="red";
         document.getElementById('ans2').style.backgroundColor="red";
@@ -138,5 +166,7 @@ function fourthOption(){
     else{
         document.getElementById('ans4').style.backgroundColor="red";
     }
+}
+disabled=true;
 }
 
