@@ -84,26 +84,26 @@ function timer(){
         disabled=true;
         if(science[counter].a === science[counter].answer){
             document.getElementById('ans1').style.backgroundColor="green";
-            document.getElementById('ans2').style.backgroundColor="red";
-            document.getElementById('ans3').style.backgroundColor="red";
-            document.getElementById('ans4').style.backgroundColor="red";
+            document.getElementById('ans2').style.backgroundColor="#b32d00";
+            document.getElementById('ans3').style.backgroundColor="#b32d00";
+            document.getElementById('ans4').style.backgroundColor="#b32d00";
       }
         else if(science[counter].b === science[counter].answer){
-            document.getElementById('ans1').style.backgroundColor="red";
+            document.getElementById('ans1').style.backgroundColor="#b32d00";
             document.getElementById('ans2').style.backgroundColor="green";
-            document.getElementById('ans3').style.backgroundColor="red";
-            document.getElementById('ans4').style.backgroundColor="red";
+            document.getElementById('ans3').style.backgroundColor="#b32d00";
+            document.getElementById('ans4').style.backgroundColor="#b32d00";
      }
          else if(science[counter].c === science[counter].answer){
-            document.getElementById('ans1').style.backgroundColor="red";
-            document.getElementById('ans2').style.backgroundColor="red";
+            document.getElementById('ans1').style.backgroundColor="#b32d00";
+            document.getElementById('ans2').style.backgroundColor="#b32d00";
             document.getElementById('ans3').style.backgroundColor="green";
-            document.getElementById('ans4').style.backgroundColor="red";
+            document.getElementById('ans4').style.backgroundColor="#b32d00";
           }
          else{
-            document.getElementById('ans1').style.backgroundColor="red";
-            document.getElementById('ans2').style.backgroundColor="red";
-            document.getElementById('ans3').style.backgroundColor="red";
+            document.getElementById('ans1').style.backgroundColor="#b32d00";
+            document.getElementById('ans2').style.backgroundColor="#b32d00";
+            document.getElementById('ans3').style.backgroundColor="#b32d00";
             document.getElementById('ans4').style.backgroundColor="green";
      }
      window.clearInterval(update);
@@ -160,28 +160,28 @@ function firstOption(){
     if(disabled === false){
     if(science[counter].a === science[counter].answer){
         document.getElementById('ans1').style.backgroundColor="green";
-        document.getElementById('ans2').style.backgroundColor="red";
-        document.getElementById('ans3').style.backgroundColor="red";
-        document.getElementById('ans4').style.backgroundColor="red";
+        document.getElementById('ans2').style.backgroundColor="#b32d00";
+        document.getElementById('ans3').style.backgroundColor="#b32d00";
+        document.getElementById('ans4').style.backgroundColor="#b32d00";
         countAns++;
         
     }
         else if(science[counter].b === science[counter].answer){
-            document.getElementById('ans1').style.backgroundColor="red";
+            document.getElementById('ans1').style.backgroundColor="#b32d00";
             document.getElementById('ans2').style.backgroundColor="green";
-            document.getElementById('ans3').style.backgroundColor="red";
-            document.getElementById('ans4').style.backgroundColor="red";
+            document.getElementById('ans3').style.backgroundColor="#b32d00";
+            document.getElementById('ans4').style.backgroundColor="#b32d00";
      }
          else if(science[counter].c === science[counter].answer){
-            document.getElementById('ans1').style.backgroundColor="red";
-            document.getElementById('ans2').style.backgroundColor="red";
+            document.getElementById('ans1').style.backgroundColor="#b32d00";
+            document.getElementById('ans2').style.backgroundColor="#b32d00";
             document.getElementById('ans3').style.backgroundColor="green";
-            document.getElementById('ans4').style.backgroundColor="red";
+            document.getElementById('ans4').style.backgroundColor="#b32d00";
           }
          else{
-            document.getElementById('ans1').style.backgroundColor="red";
-            document.getElementById('ans2').style.backgroundColor="red";
-            document.getElementById('ans3').style.backgroundColor="red";
+            document.getElementById('ans1').style.backgroundColor="#b32d00";
+            document.getElementById('ans2').style.backgroundColor="#b32d00";
+            document.getElementById('ans3').style.backgroundColor="#b32d00";
             document.getElementById('ans4').style.backgroundColor="green";
      }
     
@@ -192,29 +192,29 @@ function secondOption(){
     c=0;
     if(disabled===false){
     if(science[counter].b === science[counter].answer){
-        document.getElementById('ans1').style.backgroundColor="red";
+        document.getElementById('ans1').style.backgroundColor="#b32d00";
         document.getElementById('ans2').style.backgroundColor="green";
-        document.getElementById('ans3').style.backgroundColor="red";
-        document.getElementById('ans4').style.backgroundColor="red";
+        document.getElementById('ans3').style.backgroundColor="#b32d00";
+        document.getElementById('ans4').style.backgroundColor="#b32d00";
         countAns++;
        
     }
     else if(science[counter].a === science[counter].answer){
         document.getElementById('ans1').style.backgroundColor="green";
-        document.getElementById('ans2').style.backgroundColor="red";
-        document.getElementById('ans3').style.backgroundColor="red";
-        document.getElementById('ans4').style.backgroundColor="red";
+        document.getElementById('ans2').style.backgroundColor="#b32d00";
+        document.getElementById('ans3').style.backgroundColor="#b32d00";
+        document.getElementById('ans4').style.backgroundColor="#b32d00";
  }
      else if(science[counter].c === science[counter].answer){
-        document.getElementById('ans1').style.backgroundColor="red";
-        document.getElementById('ans2').style.backgroundColor="red";
+        document.getElementById('ans1').style.backgroundColor="#b32d00";
+        document.getElementById('ans2').style.backgroundColor="#b32d00";
         document.getElementById('ans3').style.backgroundColor="green";
-        document.getElementById('ans4').style.backgroundColor="red";
+        document.getElementById('ans4').style.backgroundColor="#b32d00";
       }
      else{
-        document.getElementById('ans1').style.backgroundColor="red";
-        document.getElementById('ans2').style.backgroundColor="red";
-        document.getElementById('ans3').style.backgroundColor="red";
+        document.getElementById('ans1').style.backgroundColor="#b32d00";
+        document.getElementById('ans2').style.backgroundColor="#b32d00";
+        document.getElementById('ans3').style.backgroundColor="#b32d00";
         document.getElementById('ans4').style.backgroundColor="green";
  }
 }   disabled=true;
@@ -223,28 +223,28 @@ function thirdOption(){
     c=0;
     if(disabled===false){
     if(science[counter].c === science[counter].answer){
-        document.getElementById('ans1').style.backgroundColor="red";
-        document.getElementById('ans2').style.backgroundColor="red";
+        document.getElementById('ans1').style.backgroundColor="#b32d00";
+        document.getElementById('ans2').style.backgroundColor="#b32d00";
         document.getElementById('ans3').style.backgroundColor="green";
-        document.getElementById('ans4').style.backgroundColor="red";
+        document.getElementById('ans4').style.backgroundColor="#b32d00";
         countAns++;
     }
     else if(science[counter].b === science[counter].answer){
-        document.getElementById('ans1').style.backgroundColor="red";
+        document.getElementById('ans1').style.backgroundColor="#b32d00";
         document.getElementById('ans2').style.backgroundColor="green";
-        document.getElementById('ans3').style.backgroundColor="red";
-        document.getElementById('ans4').style.backgroundColor="red";
+        document.getElementById('ans3').style.backgroundColor="#b32d00";
+        document.getElementById('ans4').style.backgroundColor="#b32d00";
  }
      else if(science[counter].a === science[counter].answer){
         document.getElementById('ans1').style.backgroundColor="green";
-        document.getElementById('ans2').style.backgroundColor="red";
-        document.getElementById('ans3').style.backgroundColor="red";
-        document.getElementById('ans4').style.backgroundColor="red";
+        document.getElementById('ans2').style.backgroundColor="#b32d00";
+        document.getElementById('ans3').style.backgroundColor="#b32d00";
+        document.getElementById('ans4').style.backgroundColor="#b32d00";
       }
      else{
-        document.getElementById('ans1').style.backgroundColor="red";
-        document.getElementById('ans2').style.backgroundColor="red";
-        document.getElementById('ans3').style.backgroundColor="red";
+        document.getElementById('ans1').style.backgroundColor="#b32d00";
+        document.getElementById('ans2').style.backgroundColor="#b32d00";
+        document.getElementById('ans3').style.backgroundColor="#b32d00";
         document.getElementById('ans4').style.backgroundColor="green";
  }
 }
@@ -254,30 +254,30 @@ function fourthOption(){
     c=0;
     if(disabled===false){
     if(science[counter].d === science[counter].answer){
-        document.getElementById('ans1').style.backgroundColor="red";
-        document.getElementById('ans2').style.backgroundColor="red";
-        document.getElementById('ans3').style.backgroundColor="red";
+        document.getElementById('ans1').style.backgroundColor="#b32d00";
+        document.getElementById('ans2').style.backgroundColor="#b32d00";
+        document.getElementById('ans3').style.backgroundColor="#b32d00";
         document.getElementById('ans4').style.backgroundColor="green";
         countAns++;
        
     }
     else if(science[counter].b === science[counter].answer){
-        document.getElementById('ans1').style.backgroundColor="red";
+        document.getElementById('ans1').style.backgroundColor="#b32d00";
         document.getElementById('ans2').style.backgroundColor="green";
-        document.getElementById('ans3').style.backgroundColor="red";
-        document.getElementById('ans4').style.backgroundColor="red";
+        document.getElementById('ans3').style.backgroundColor="#b32d00";
+        document.getElementById('ans4').style.backgroundColor="#b32d00";
  }
      else if(science[counter].c === science[counter].answer){
-        document.getElementById('ans1').style.backgroundColor="red";
-        document.getElementById('ans2').style.backgroundColor="red";
+        document.getElementById('ans1').style.backgroundColor="#b32d00";
+        document.getElementById('ans2').style.backgroundColor="#b32d00";
         document.getElementById('ans3').style.backgroundColor="green";
-        document.getElementById('ans4').style.backgroundColor="red";
+        document.getElementById('ans4').style.backgroundColor="#b32d00";
       }
      else{
         document.getElementById('ans1').style.backgroundColor="green";
-        document.getElementById('ans2').style.backgroundColor="red";
-        document.getElementById('ans3').style.backgroundColor="red";
-        document.getElementById('ans4').style.backgroundColor="red";
+        document.getElementById('ans2').style.backgroundColor="#b32d00";
+        document.getElementById('ans3').style.backgroundColor="#b32d00";
+        document.getElementById('ans4').style.backgroundColor="#b32d00";
  }
 }
 disabled=true;
